@@ -3,6 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/HibernateListener.java</file>
+            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/Car.java</file>
+            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/Service.java</file>
             <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/hibernate/EhElementLogicFacade.java</file>
             <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/ResponseAvailableHour.java</file>
             <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/containerlist/ListResponseDate.java</file>
@@ -17,6 +20,7 @@
             <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/hibernate.cfg.xml</file>
             <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/web/index.html</file>
             <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/hibernate/EhDaoLogicFacade.java</file>
+            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/UserBooking.java</file>
         </group>
     </open-files>
 </project-private>

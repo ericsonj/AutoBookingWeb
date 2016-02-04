@@ -50,7 +50,11 @@ public class AvailableHourDao extends EhElementLogicFacade<AvailableHour, Long>{
     }
     
     public List<AvailableHour> findInDateNotBookingCurrentDay(Date date){
+        Date finishDate = new Date(date.getTime());
+        finishDate.setHours(23);
+        finishDate.setMinutes(59);
+        finishDate.setSeconds(59);
         return findByQuery("SELECT R FROM "+ getElementClass().getCanonicalName() 
-                + " R WHERE date > '"+dateHourFormat.format(date)+" %' AND isBooking = 'N'");
+                + " R WHERE ( date BETWEEN '"+dateHourFormat.format(date)+"' AND '"+dateHourFormat.format(finishDate)+"' ) AND isBooking = 'N'");
     }
 }

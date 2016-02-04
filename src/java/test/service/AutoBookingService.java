@@ -47,6 +47,7 @@ public class AutoBookingService {
     private ServiceDao serviceDao = new ServiceDao();
     private CarDateDao carDateDao = new CarDateDao();
     private AvailableHourDao dao = new AvailableHourDao();
+    private int maxHour = 18;
 
     @GET
     @Path("/get")
@@ -131,7 +132,8 @@ public class AutoBookingService {
                         System.out.println("CREAR PULL");
                         dao.createPullDate(requestDate);
                     }
-                    responseAHour.setList(findDateNotBookingCurrentDay(requestDate));
+                    System.out.println(">>>>>>>>>>>>>>>>>>>>>>>> getdayCurrent");
+                    responseAHour.setList(findDateNotBookingCurrentDay(currentDate));
                     return responseAHour;
                 }
             }else{  
@@ -195,7 +197,7 @@ public class AutoBookingService {
 
     public Date getDateFinal() {
         Date date = new Date();
-        date.setHours(18);
+        date.setHours(maxHour);
         date.setMinutes(0);
         date.setSeconds(1);
         return date;
