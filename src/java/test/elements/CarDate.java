@@ -40,17 +40,21 @@ public class CarDate implements Serializable {
     @Column(name = "date")
     private Date date;
 
+    @Column(name = "created_date")
+    private Date createdDate;
+    
     @Column(name = "state")
     private String state;
 
     public CarDate() {
     }
 
-    public CarDate(User user, Service service, Car car, Date date, String state) {
+    public CarDate(User user, Service service, Car car, Date date, Date createdDate, String state) {
         this.user = user;
         this.service = service;
         this.car = car;
         this.date = date;
+        this.createdDate = createdDate;
         this.state = state;
     }
 
@@ -94,6 +98,14 @@ public class CarDate implements Serializable {
         this.date = date;
     }
 
+    public Date getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(Date createdDate) {
+        this.createdDate = createdDate;
+    }
+
     public String getState() {
         return state;
     }
@@ -104,7 +116,7 @@ public class CarDate implements Serializable {
 
     @Override
     public String toString() {
-        return "CarDate{" + "id=" + id + ", user=" + user + ", service=" + service + ", car=" + car + ", date=" + date + ", state=" + state + '}';
+        return "CarDate{" + "id=" + id + ", user=" + user + ", service=" + service + ", car=" + car + ", date=" + date + ", createdDate=" + createdDate + ", state=" + state + '}';
     }
-    
+   
 }

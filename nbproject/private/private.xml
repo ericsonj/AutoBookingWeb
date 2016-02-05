@@ -2,25 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/HibernateListener.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/Car.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/Service.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/hibernate/EhElementLogicFacade.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/ResponseAvailableHour.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/containerlist/ListResponseDate.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/AvailableHour.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/containerlist/ListResponseAHour.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/service/AutoBookingService.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/cronjobs/TaskDate.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/dao/CarDateDao.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/RequestMessage.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/dao/AvailableHourDao.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/web/WEB-INF/web.xml</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/hibernate.cfg.xml</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/web/index.html</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/hibernate/EhDaoLogicFacade.java</file>
-            <file>file:/MYPROJECTS/JAVA/WEB/AutoBookingWeb/src/java/test/elements/UserBooking.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

@@ -100,7 +100,7 @@ public class AutoBookingService {
         System.out.println(">>>>>>>>>>.." + carDate.size());
         LinkedList<ResponseDate> responseDate = new LinkedList<>();
         for (CarDate carDate1 : carDate) {
-            responseDate.addFirst(new ResponseDate(carDate1.getService().getNameService(), carDate1.getCar().getCarCode(), carDate1.getDate(), carDate1.getState()));
+            responseDate.addFirst(new ResponseDate(carDate1.getId(), carDate1.getService().getNameService(), carDate1.getCar().getCarCode(), carDate1.getDate(), carDate1.getState()));
         }
         listResponseDate.setList(responseDate);
         return listResponseDate;
@@ -136,7 +136,7 @@ public class AutoBookingService {
                     responseAHour.setList(findDateNotBookingCurrentDay(currentDate));
                     return responseAHour;
                 }
-            }else{  
+            } else {
                 System.out.println(">>>>>>>>>>>>No the seem");
                 if (requestDate.after(currentDate)) {
                     if (findinDate(requestDate).isEmpty()) {
@@ -180,15 +180,16 @@ public class AutoBookingService {
             carDao.create(car);
         }
         Service service = serviceDao.find(userBooking.getService_id());
-        
-        System.out.println(">>>>>>>>>>>>>>>>>>      id "+userBooking.getAvailableHourId());
-        AvailableHour availableHour = dao.find(userBooking.getAvailableHourId());
-        availableHour.setIsBooking("Y");
-        dao.edit(availableHour);
-        
-        CarDate carDate = new CarDate(user, service, car, userBooking.getDate(), "BOOKING");
+
+        Date createdDate = new Date();
+        CarDate carDate;
+        carDate = new CarDate(user, service, car, userBooking.getDate(), createdDate, "BOOKING");
         try {
             long carDateId = carDateDao.create(carDate);
+            System.out.println(">>>>>>>>>>>>>>>>>>      id " + userBooking.getAvailableHourId());
+            AvailableHour availableHour = dao.find(userBooking.getAvailableHourId());
+            availableHour.setIsBooking("Y");
+            dao.edit(availableHour);
         } catch (Exception e) {
             return false;
         }
@@ -225,12 +226,12 @@ public class AutoBookingService {
         LinkedList<ResponseAvailableHour> resp = new LinkedList<>();
         List<AvailableHour> list = dao.findInDateNotBooking(date);
         for (AvailableHour list1 : list) {
-            System.out.println(">><<<<<<<<<   list1 "+list1.getId());
+            System.out.println(">><<<<<<<<<   list1 " + list1.getId());
             resp.add(new ResponseAvailableHour(list1.getId(), list1.getDateHour()));
         }
         return resp;
     }
-    
+
     public LinkedList<ResponseAvailableHour> findDateNotBookingCurrentDay(Date date) {
         LinkedList<ResponseAvailableHour> resp = new LinkedList<>();
         List<AvailableHour> list = dao.findInDateNotBookingCurrentDay(date);
